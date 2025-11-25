@@ -1,0 +1,77 @@
+@model ProyectoSena2025.Models.Matricula
+
+@{
+    ViewData["Title"] = "Nueva Matrícula";
+}
+
+<div class="row fade-in">
+    <div class="col-md-8 offset-md-2">
+        <h2 class="mb-4"><i class="bi bi-person-plus me-2"></i>Nueva Matrícula</h2>
+        
+        <form asp-action="Crear" method="post" class="needs-validation" novalidate>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-4"></div>
+            
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="NumeroDocumento" class="form-label">
+                        <i class="bi bi-card-text me-1"></i>Número de Documento *
+                    </label>
+                    <input asp-for="NumeroDocumento" class="form-control" placeholder="Ingrese el número de documento" required />
+                    <span asp-validation-for="NumeroDocumento" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="NombreCompleto" class="form-label">
+                        <i class="bi bi-person me-1"></i>Nombre Completo *
+                    </label>
+                    <input asp-for="NombreCompleto" class="form-control" placeholder="Ingrese el nombre completo" required />
+                    <span asp-validation-for="NombreCompleto" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Programa" class="form-label">
+                    <i class="bi bi-book me-1"></i>Programa *
+                </label>
+                <input asp-for="Programa" class="form-control" placeholder="Ej: Análisis y Desarrollo de Software" required />
+                <span asp-validation-for="Programa" class="text-danger"></span>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Ficha" class="form-label">
+                        <i class="bi bi-hash me-1"></i>Ficha *
+                    </label>
+                    <input asp-for="Ficha" class="form-control" placeholder="Ej: 1234567" required />
+                    <span asp-validation-for="Ficha" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Estado" class="form-label">
+                        <i class="bi bi-check-circle me-1"></i>Estado
+                    </label>
+                    <select asp-for="Estado" class="form-select">
+                        <option value="Activa">Activa</option>
+                        <option value="Inactiva">Inactiva</option>
+                        <option value="Cancelada">Cancelada</option>
+                    </select>
+                    <span asp-validation-for="Estado" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="d-flex gap-2 mt-4">
+                <button type="submit" class="btn btn-primary btn-lg">
+                    <i class="bi bi-save me-2"></i>Guardar Matrícula
+                </button>
+                <a asp-action="Index" class="btn btn-secondary btn-lg">
+                    <i class="bi bi-x-circle me-2"></i>Cancelar
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
