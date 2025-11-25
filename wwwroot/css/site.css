@@ -60,15 +60,17 @@ body::before {
 /* Navbar personalizado con gradiente y glassmorphism */
 nav.custom-navbar,
 .navbar.custom-navbar,
-.custom-navbar {
+.custom-navbar,
+.navbar.navbar-expand-sm.custom-navbar,
+nav.navbar.custom-navbar {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
     padding: 1rem 0 !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
     position: relative !important;
-    z-index: 1000;
+    z-index: 1000 !important;
 }
 
 .custom-navbar::before {
@@ -96,13 +98,16 @@ nav.custom-navbar,
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
 }
 
-.custom-navbar .nav-link {
-    transition: all 0.3s ease;
-    border-radius: 8px;
+.custom-navbar .nav-link,
+.navbar.custom-navbar .nav-link,
+nav.custom-navbar .nav-link,
+.custom-navbar a.nav-link {
+    transition: all 0.3s ease !important;
+    border-radius: 8px !important;
     padding: 0.5rem 1rem !important;
-    margin: 0 0.25rem;
-    position: relative;
-    font-weight: 500;
+    margin: 0 0.25rem !important;
+    position: relative !important;
+    font-weight: 500 !important;
 }
 
 .custom-navbar .nav-link::before {
@@ -121,30 +126,36 @@ nav.custom-navbar,
     width: 80%;
 }
 
-.custom-navbar .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.custom-navbar .nav-link:hover,
+.navbar.custom-navbar .nav-link:hover,
+nav.custom-navbar .nav-link:hover,
+.custom-navbar a.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Contenedor principal con efecto glassmorphism */
-.container {
-    margin-top: 2rem;
-    position: relative;
-    z-index: 1;
+.container,
+div.container,
+.container-fluid {
+    margin-top: 2rem !important;
+    position: relative !important;
+    z-index: 1 !important;
 }
 
 main,
-main[role="main"] {
+main[role="main"],
+main.pb-3 {
     background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
     border-radius: 20px !important;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
     padding: 2.5rem !important;
     margin-bottom: 2rem !important;
     border: 1px solid rgba(255, 255, 255, 0.3) !important;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease !important;
 }
 
 main:hover {
@@ -182,17 +193,19 @@ h2::after {
 }
 
 /* Botones mejorados con efectos 3D */
-.btn {
-    border-radius: 12px;
-    padding: 0.75rem 2rem;
-    font-weight: 600;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-size: 0.875rem;
+.btn,
+button.btn,
+a.btn {
+    border-radius: 12px !important;
+    padding: 0.75rem 2rem !important;
+    font-weight: 600 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+    font-size: 0.875rem !important;
 }
 
 .btn::before {
@@ -213,9 +226,11 @@ h2::after {
     height: 300px;
 }
 
-.btn:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+.btn:hover,
+button.btn:hover,
+a.btn:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
 }
 
 .btn:active {
@@ -229,20 +244,26 @@ a.btn-primary {
     color: white !important;
 }
 
-.btn-primary:hover {
-    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-    color: white;
+.btn-primary:hover,
+a.btn-primary:hover,
+button.btn-primary:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
+    color: white !important;
 }
 
-.btn-success {
-    background: var(--gradient-success);
-    border: none;
-    color: white;
+.btn-success,
+a.btn-success,
+button.btn-success {
+    background: var(--gradient-success) !important;
+    border: none !important;
+    color: white !important;
 }
 
-.btn-success:hover {
-    background: linear-gradient(135deg, #20c997 0%, #28a745 100%);
-    color: white;
+.btn-success:hover,
+a.btn-success:hover,
+button.btn-success:hover {
+    background: linear-gradient(135deg, #20c997 0%, #28a745 100%) !important;
+    color: white !important;
 }
 
 .btn-warning {
@@ -256,15 +277,19 @@ a.btn-primary {
     color: #000;
 }
 
-.btn-danger {
-    background: var(--gradient-danger);
-    border: none;
-    color: white;
+.btn-danger,
+a.btn-danger,
+button.btn-danger {
+    background: var(--gradient-danger) !important;
+    border: none !important;
+    color: white !important;
 }
 
-.btn-danger:hover {
-    background: linear-gradient(135deg, #c82333 0%, #dc3545 100%);
-    color: white;
+.btn-danger:hover,
+a.btn-danger:hover,
+button.btn-danger:hover {
+    background: linear-gradient(135deg, #c82333 0%, #dc3545 100%) !important;
+    color: white !important;
 }
 
 .btn-info {
@@ -317,7 +342,8 @@ div.table-responsive {
 }
 
 .table thead,
-table thead {
+table thead,
+.table > thead {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
     color: white !important;
     position: relative;
