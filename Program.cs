@@ -15,8 +15,9 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+// Configurar archivos estáticos - DEBE estar antes de UseRouting
 app.UseStaticFiles();
+app.UseHttpsRedirection();
 
 app.UseRouting();
 

@@ -4,14 +4,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Sistema de Matrícula</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/wwwroot/css/site.css" asp-append-version="true" />
     <style>
-        /* Estilos inline para asegurar que se carguen */
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) !important;
-            background-attachment: fixed !important;
+        .custom-navbar {
+            background-color: #343a40; /* Color de fondo oscuro */
+        }
+        .custom-navbar .nav-link {
+            color: #ffffff; /* Color de texto blanco */
+        }
+        .custom-navbar .nav-link:hover {
+            color: #ffc107; /* Color de texto al pasar el mouse */
+        }
+        .custom-footer {
+            background-color: #f8f9fa; /* Color de fondo claro */
+            padding: 15px 0;
+        }
+        .custom-footer .container {
+            text-align: center;
         }
     </style>
 </head>
@@ -56,7 +68,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src=..."~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -128,7 +128,7 @@ style.textContent = `
     .ripple {
         position: absolute;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.6);
+        background: rgba(114, 65, 65, 0.6);
         transform: scale(0);
         animation: ripple-animation 0.6s ease-out;
         pointer-events: none;
